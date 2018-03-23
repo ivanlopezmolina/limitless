@@ -4,8 +4,6 @@ using System.Linq;
 using System.Threading.Tasks;
 
 // ADD THIS PART TO YOUR CODE
-using System.Linq;
-using System.Threading.Tasks;
 using System.Net;
 using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
