@@ -6,16 +6,6 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-
-// ADD THIS PART TO YOUR CODE
-using System.Linq;
-using System.Threading.Tasks;
-using System.Net;
-using Microsoft.Azure.Documents;
-using Microsoft.Azure.Documents.Client;
-using Newtonsoft.Json;
 
 namespace limitless
 {
@@ -39,10 +29,9 @@ namespace limitless
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                //app.UseDeveloperExceptionPage();
             }
-            DataService ds = new DataService();
-
+ 
             app.UseMvc();
         }
     }
