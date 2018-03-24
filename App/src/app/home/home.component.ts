@@ -12,11 +12,9 @@ export class HomeComponent implements OnInit {
   errorMessage: string;
   years: any[];
   selectedYear: any;
-  public currentLocation: ILocation = {
-    'locationId' : 0,
-    'description': '',
-    'latitude' : 35.229464,
-    'longitude' : -80.855375 };
+  public currentLocation = {
+    'Latitude' : 35.229464,
+    'Longitude' : -80.855375 };
   public locations: any[] = [];
 
   constructor(private _locationService: LocationService, private _sharedService: SharedService) {

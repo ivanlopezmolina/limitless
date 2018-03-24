@@ -1,23 +1,8 @@
 ﻿<Properties StartupConfiguration="{F2F7D64A-45B6-4585-9199-58E5EC915113}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="limitless/DataService.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="limitless/Models/Housing.cs">
     <Files>
-      <File FileName="limitless/DataService.cs" Line="15" Column="5" />
+      <File FileName="limitless/Models/Housing.cs" Line="15" Column="28" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State name="__root__">
-          <Node name="limitless" expanded="True">
-            <Node name="limitless" expanded="True">
-              <Node name="Dependencies" expanded="True">
-                <Node name="PackageDependencies" selected="True" />
-              </Node>
-              <Node name="Controllers" expanded="True" />
-              <Node name="Properties" expanded="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

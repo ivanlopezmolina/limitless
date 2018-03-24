@@ -14,18 +14,30 @@
             <table class='table' *ngIf='locations && locations.length'>
                 <thead>
                     <tr>
-                        <th>Product</th>
-                        <th>Code</th>
-                        <th>Available</th>
-                        <th>Price</th>
+                      <th>TotalPeople</th>
+                      <th>SpedningPerMonth</th>
+                      <th>HouseHoldIncome</th>
+                      <th>PersonIncome</th>
+                      <th>HouseHoldIncomeUnder5K</th>
+                      <th>HouseHoldIncomeBetween5KAnd10K</th>
+                      <th>HouseHoldIncomeBetween10KAnd15K</th>
+                      <th>HouseHoldIncomeBetween15KAnd20K</th>
+                      <th>HouseHoldIncomeAbove20K</th>
+                      <th>StdZip</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr *ngFor='let location of locations'>
-                        <td>{{ location.locationId }}</td>
-                        <td>{{ location.description }}</td>
-                        <td>{{ location.longitude }}</td>
-                        <td>{{ location.latitude }}</td>
+                        <td>{{ location.TotalPeople }}</td>
+                        <td>{{ location.SpedningPerMonth }}</td>
+                        <td>{{ location.HouseHoldIncome }}</td>
+                        <td>{{ location.PersonIncome }}</td>
+                        <td>{{ location.HouseHoldIncomeUnder5K }}</td>
+                        <td>{{ location.HouseHoldIncomeBetween5KAnd10K }}</td>
+                        <td>{{ location.HouseHoldIncomeBetween10KAnd15K }}</td>
+                        <td>{{ location.HouseHoldIncomeBetween15KAnd20K }}</td>
+                        <td>{{ location.HouseHoldIncomeAbove20K }}</td>
+                        <td>{{ location.StdZip }}</td>
                     </tr>
                 </tbody>
             </table>
