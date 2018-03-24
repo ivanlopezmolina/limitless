@@ -1,15 +1,15 @@
 export interface ILocation {
-  TotalPeople: number;
-  SpedningPerMonth: number;
-  HouseHoldIncome: number;
-  PersonIncome: number;
-  HouseHoldIncomeUnder5K: number;
-  HouseHoldIncomeBetween5KAnd10K: number;
-  HouseHoldIncomeBetween10KAnd15K: number;
-  HouseHoldIncomeBetween15KAnd20K: number;
-  HouseHoldIncomeAbove20K: number;
-  StdZip: number;
-  Latitude: number;
-  Longitude: number;
+  totalPeople: number;
+  spedningPerMonth: number;
+  houseHoldIncome: number;
+  personIncome: number;
+  houseHoldIncomeUnder5K: number;
+  houseHoldIncomeBetween5KAnd10K: number;
+  houseHoldIncomeBetween10KAnd15K: number;
+  houseHoldIncomeBetween15KAnd20K: number;
+  houseHoldIncomeAbove20K: number;
+  stdZip: number;
+  latitude: number;
+  longitude: number;
 }
 

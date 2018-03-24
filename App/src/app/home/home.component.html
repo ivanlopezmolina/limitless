@@ -16,8 +16,8 @@
                 [longitude]="currentLocation.Longitude"
                 [zoom] = "13">
               <agm-marker *ngFor="let location of locations"
-                  [latitude]="location.Latitude"
-                  [longitude]="location.Longitude">
+                  [latitude]="location.latitude"
+                  [longitude]="location.longitude">
 
                   <agm-info-window >
                     <h3><strong>Location Details</strong></h3>
@@ -25,8 +25,8 @@
                   </agm-info-window>
               </agm-marker>
               <agm-circle *ngFor="let location of locations"
-                  [latitude]="location.Latitude"
-                  [longitude]="location.Longitude"
+                  [latitude]="location.latitude"
+                  [longitude]="location.longitude"
                   [circleDraggable]="true"
                   [editable]="true"
                   [fillColor]="'#2D882D'"
