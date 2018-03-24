@@ -3,3 +3,5 @@ API/limitless/obj/
 API/.vs/limitless/xs/UserPrefs.xml
 API/.vs/limitless/xs/UserPrefs.xml
 API/.vs/limitless/xs/UserPrefs.xml
+/API/.vs/limitless/v15/Server/sqlite3
+*.suo

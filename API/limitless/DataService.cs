@@ -9,6 +9,8 @@ using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using limitless.Models;
+using limitless.Interfaces;
 
 namespace limitless
 {
@@ -26,8 +28,15 @@ namespace limitless
             this.client = new DocumentClient(new Uri(EndpointUri), PrimaryKey);
             await this.client.CreateDatabaseIfNotExistsAsync(new Database { Id = "limitlessDB" });
             // ADD THIS PART TO YOUR CODE
-            await this.client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri("limitlessDB"), 
+            await this.client.CreateDocumentCollectionIfNotExistsAsync(UriFactory.CreateDatabaseUri("limitlessDB"),
                 new DocumentCollection { Id = "SampleCollection" });
+            Sample sample = new Sample
+            {
+                name = "Sergio",
+                user = "Ames",
+            };
+
+           await this.CreateSampleDocumentIfNotExists("limitlessDB", "SampleCollection", sample);
 
         }
 
@@ -51,6 +60,27 @@ namespace limitless
             {
                 Debug.WriteLine("End of demo, press any key to exit.");
             }
+        }
+
+        // ADD THIS PART TO YOUR CODE
+        private async Task CreateSampleDocumentIfNotExists(string databaseName, string collectionName, Sample sample)
+        {
+            try
+            {
+                await this.client.ReadDocumentAsync(UriFactory.CreateDocumentUri(databaseName, collectionName, sample.name));
+            }
+            catch (DocumentClientException de)
+            {
+                if (de.StatusCode == HttpStatusCode.NotFound)
+                {
+                    await this.client.CreateDocumentAsync(UriFactory.CreateDocumentCollectionUri(databaseName, collectionName), sample);
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
         }
     }
 }
