@@ -22,6 +22,7 @@ import { LocationService } from './shared/location.service';
 import { ListComponent } from './list/list.component';
 import { SharedService } from './shared/shared.service';
 
+
 // Configs
 export function getAuthServiceConfigs() {
   // tslint:disable-next-line:no-shadowed-variable

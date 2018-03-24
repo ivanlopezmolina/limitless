@@ -10,7 +10,8 @@ import { ILocation } from './location';
 
 @Injectable()
 export class LocationService {
-    private _locationUrl = './api/locations/locations.json';
+    // private _locationUrl = './api/locations/locations.json';
+    private _locationUrl = 'http://localhost:59760/api/values';
 
     constructor(private _http: HttpClient) { }
 
@@ -20,9 +21,9 @@ export class LocationService {
             .catch(this.handleError);
     }
 
-    getLocation(id: number, year: number): Observable<ILocation> {
+    getLocation(StdZip: number, year: number): Observable<ILocation> {
         return this.getLocations(year)
-            .map((locations: ILocation[]) => locations.find(p => p.locationId === id));
+            .map((locations: ILocation[]) => locations.find(p => p.stdZip === StdZip));
     }
 
     private handleError(err: HttpErrorResponse) {

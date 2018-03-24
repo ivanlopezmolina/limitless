@@ -8,7 +8,7 @@ import { SharedService } from '../shared/shared.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  public pageTitle: string = 'list';
+  public pageTitle: string = 'Data List';
   public listFilter: string;
   errorMessage: string;
   years: any[];
